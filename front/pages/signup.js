@@ -1,6 +1,4 @@
 import React , { useState, useCallback } from 'react';
-import Head from 'next/head';
-import AppLayout from '../components/AppLayout';
 import { Form, Checkbox ,Input, Button } from 'antd';
 
 const Signup = () => {
@@ -47,12 +45,7 @@ const Signup = () => {
 
     return (
         <>
-        <Head>
-          <title>artse</title>
-           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.23.6/antd.css"/>   
-        </Head>
-        <AppLayout>
-            <Form onSubmit={onSubmit} style={{ padding: 50}}>
+             <Form onSubmit={onSubmit} style={{ padding: 50}}>
                 <div>
                     <label htmlFor="user-id">아이디</label>
                     <br/>
@@ -82,7 +75,6 @@ const Signup = () => {
                     <Button type="danger" htmlType="submit">가입하기</Button>
                 </div>
             </Form>
-        </AppLayout>
         </>
     );
 };
